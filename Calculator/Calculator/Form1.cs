@@ -139,6 +139,13 @@ namespace Calculator
             input += ".";
         }
 
+        private void btnNegative_Click(object sender, EventArgs e)
+        {
+            this.Display.Text = "";
+            input += '-';
+            this.Display.Text += input;
+        }
+
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.Display.Text = "";
@@ -147,7 +154,25 @@ namespace Calculator
             this.value2 = string.Empty;
             lblError.Visible = false;
             temp = string.Empty;
-            
+            lblError.Visible = false;
+            btnPlus.Enabled = true;
+            btn9.Enabled = true;
+            btn8.Enabled = true;
+            btn7.Enabled = true;
+            btn6.Enabled = true;
+            btn5.Enabled = true;
+            btn4.Enabled = true;
+            btn3.Enabled = true;
+            btn2.Enabled = true;
+            btn1.Enabled = true;
+            btnNegative.Enabled = true;
+            btnDecimal.Enabled = true;
+            btnDivide.Enabled = true;
+            btnEqual.Enabled = true;
+            btn0.Enabled = true;
+            btnMinus.Enabled = true;
+            btnDelete.Enabled = true;
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -182,7 +207,7 @@ namespace Calculator
                     Display.Text = answer.ToString();
                 }
                 else
-                    lblError.Visible = true;
+                    Error();
             }
             else if (operation == "-")
             {
@@ -197,5 +222,29 @@ namespace Calculator
 
             temp = answer.ToString(); //storing answer 
         }
+
+        private void Error()
+        {
+            lblError.Visible = true;
+            btnPlus.Enabled = false;
+            btn9.Enabled = false;
+            btn8.Enabled = false;
+            btn7.Enabled = false;
+            btn6.Enabled = false;
+            btn5.Enabled = false;
+            btn4.Enabled = false;
+            btn3.Enabled = false;
+            btn2.Enabled = false;
+            btn1.Enabled = false;
+            btnNegative.Enabled = false;
+            btnDecimal.Enabled = false;
+            btnDivide.Enabled = false;
+            btnEqual.Enabled = false;
+            btn0.Enabled = false;
+            btnMinus.Enabled = false;
+            btnDelete.Enabled = false;
+        }
+
+
     }
 }

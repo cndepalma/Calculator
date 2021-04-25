@@ -47,6 +47,7 @@
             this.Display = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
+            this.btnNegative = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn7
@@ -161,7 +162,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(12, 145);
+            this.btnClear.Location = new System.Drawing.Point(174, 29);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 11;
@@ -213,7 +214,7 @@
             // 
             this.Display.Location = new System.Drawing.Point(12, 32);
             this.Display.Name = "Display";
-            this.Display.Size = new System.Drawing.Size(237, 20);
+            this.Display.Size = new System.Drawing.Size(156, 20);
             this.Display.TabIndex = 16;
             // 
             // btnDelete
@@ -238,6 +239,16 @@
             this.lblError.Text = "* Error *";
             this.lblError.Visible = false;
             // 
+            // btnNegative
+            // 
+            this.btnNegative.Location = new System.Drawing.Point(12, 145);
+            this.btnNegative.Name = "btnNegative";
+            this.btnNegative.Size = new System.Drawing.Size(75, 23);
+            this.btnNegative.TabIndex = 19;
+            this.btnNegative.Text = "-";
+            this.btnNegative.UseVisualStyleBackColor = true;
+            this.btnNegative.Click += new System.EventHandler(this.btnNegative_Click);
+            // 
             // Calculator
             // 
             this.AllowDrop = true;
@@ -245,6 +256,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(341, 187);
+            this.Controls.Add(this.btnNegative);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.Display);
@@ -295,6 +307,7 @@
         private System.Windows.Forms.TextBox Display;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Button btnNegative;
     }
 }
 

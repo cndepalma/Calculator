@@ -48,7 +48,6 @@ namespace Calculator
             this.Display.Text = "";
             input += 9;
             this.Display.Text += input;
-
         }
 
         private void btn4_Click(object sender, EventArgs e)
@@ -56,7 +55,6 @@ namespace Calculator
             this.Display.Text = "";
             input += 4;
             this.Display.Text += input;
-
         }
 
         private void btn5_Click(object sender, EventArgs e)
@@ -64,7 +62,6 @@ namespace Calculator
             this.Display.Text = "";
             input += 5;
             this.Display.Text += input;
-
         }
 
         private void btn6_Click(object sender, EventArgs e)
@@ -72,7 +69,6 @@ namespace Calculator
             this.Display.Text = "";
             input += 6;
             this.Display.Text += input;
-
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -80,7 +76,6 @@ namespace Calculator
             this.Display.Text = "";
             input += 1;
             this.Display.Text += input;
-
         }
 
         private void btn2_Click(object sender, EventArgs e)
@@ -88,7 +83,6 @@ namespace Calculator
             this.Display.Text = "";
             input += 2;
             this.Display.Text += input;
-
         }
 
         private void btn3_Click(object sender, EventArgs e)
@@ -96,7 +90,6 @@ namespace Calculator
             this.Display.Text = "";
             input += 3;
             this.Display.Text += input;
-
         }
 
         private void btn0_Click(object sender, EventArgs e)
@@ -104,7 +97,6 @@ namespace Calculator
             this.Display.Text = "";
             input += 0;
             this.Display.Text += input;
-
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -117,7 +109,13 @@ namespace Calculator
            value1 = input;
             operation = "/";
            input = string.Empty;
+        }
 
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            value1 = input;
+            operation = "*";
+            input = string.Empty;
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
@@ -172,6 +170,7 @@ namespace Calculator
             btn0.Enabled = true;
             btnMinus.Enabled = true;
             btnDelete.Enabled = true;
+            btnMultiply.Enabled = true;
 
         }
 
@@ -209,6 +208,11 @@ namespace Calculator
                 else
                     Error();
             }
+            else if (operation == "*")
+            {
+                answer = set1 * set2;
+                Display.Text = answer.ToString();
+            }
             else if (operation == "-")
             {
                 answer = set1 - set2;
@@ -243,8 +247,8 @@ namespace Calculator
             btn0.Enabled = false;
             btnMinus.Enabled = false;
             btnDelete.Enabled = false;
+            btnMultiply.Enabled = false;
         }
-
 
     }
 }

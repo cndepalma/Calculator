@@ -48,6 +48,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.btnNegative = new System.Windows.Forms.Button();
+            this.btnMultiply = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn7
@@ -152,9 +153,9 @@
             // 
             // btnEqual
             // 
-            this.btnEqual.Location = new System.Drawing.Point(255, 145);
+            this.btnEqual.Location = new System.Drawing.Point(336, 87);
             this.btnEqual.Name = "btnEqual";
-            this.btnEqual.Size = new System.Drawing.Size(75, 23);
+            this.btnEqual.Size = new System.Drawing.Size(75, 81);
             this.btnEqual.TabIndex = 10;
             this.btnEqual.Text = "=";
             this.btnEqual.UseVisualStyleBackColor = true;
@@ -162,7 +163,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(174, 29);
+            this.btnClear.Location = new System.Drawing.Point(336, 58);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 11;
@@ -182,7 +183,7 @@
             // 
             // btnPlus
             // 
-            this.btnPlus.Location = new System.Drawing.Point(255, 116);
+            this.btnPlus.Location = new System.Drawing.Point(255, 145);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(75, 23);
             this.btnPlus.TabIndex = 13;
@@ -192,7 +193,7 @@
             // 
             // btnMinus
             // 
-            this.btnMinus.Location = new System.Drawing.Point(255, 87);
+            this.btnMinus.Location = new System.Drawing.Point(255, 116);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(75, 23);
             this.btnMinus.TabIndex = 14;
@@ -214,12 +215,12 @@
             // 
             this.Display.Location = new System.Drawing.Point(12, 32);
             this.Display.Name = "Display";
-            this.Display.Size = new System.Drawing.Size(156, 20);
+            this.Display.Size = new System.Drawing.Size(318, 20);
             this.Display.TabIndex = 16;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(255, 29);
+            this.btnDelete.Location = new System.Drawing.Point(336, 29);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 17;
@@ -249,13 +250,25 @@
             this.btnNegative.UseVisualStyleBackColor = true;
             this.btnNegative.Click += new System.EventHandler(this.btnNegative_Click);
             // 
+            // btnMultiply
+            // 
+            this.btnMultiply.AutoEllipsis = true;
+            this.btnMultiply.Location = new System.Drawing.Point(255, 87);
+            this.btnMultiply.Name = "btnMultiply";
+            this.btnMultiply.Size = new System.Drawing.Size(75, 23);
+            this.btnMultiply.TabIndex = 20;
+            this.btnMultiply.Text = "*";
+            this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
+            // 
             // Calculator
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(341, 187);
+            this.ClientSize = new System.Drawing.Size(423, 185);
+            this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.btnNegative);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnDelete);
@@ -308,6 +321,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Button btnNegative;
+        private System.Windows.Forms.Button btnMultiply;
     }
 }
 
